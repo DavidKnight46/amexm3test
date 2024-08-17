@@ -5,7 +5,7 @@ cd ./src/main/resources
 pwd
 
 #Run script for DB configuration
-psql -U postgres -f ./buildDB.sql
+psql -U postgres -f buildDB.sql
 
 cd ../../../
 

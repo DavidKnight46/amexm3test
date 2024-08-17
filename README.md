@@ -20,8 +20,9 @@ The following software will be required to run this application:
 To run this software please perform the following steps:
 
 * Git clone the repo with following command: git clone git@github.com:DavidKnight46/amexm3test.git
-* Navigate to root directory of repo (where buildScript.sh is located)
-* Run ./buildScript.sh
+* Import into Intellij IDE
+* Open Terminal in Intellij IDE
+* Run ./buildScript.sh command in terminal
 * Enter password setup for postgres user when prompted
 * Optional test endpoints using AmexRESTEndpoints.http in Intellij
 

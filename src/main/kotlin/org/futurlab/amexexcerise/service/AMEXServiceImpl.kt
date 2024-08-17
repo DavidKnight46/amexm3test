@@ -1,18 +1,23 @@
 package org.futurlab.amexexcerise.service
 
+import lombok.extern.slf4j.Slf4j
 import org.apache.ibatis.session.SqlSession
 import org.futurlab.amexexcerise.database.AmexDatabaseMapper
 import org.futurlab.amexexcerise.exceptions.GiftCardIDNotFoundException
 import org.futurlab.amexexcerise.models.GiftCardModelDBResponse
 import org.futurlab.amexexcerise.models.GiftCardModelRequest
 import org.futurlab.amexexcerise.models.GiftCardModelResponse
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import java.util.UUID
 
+@Slf4j
 @Service
 class AMEXServiceImpl(
     private val createSQLSession: SqlSession
 ) : AMEXServiceI {
+    private val logger = LoggerFactory.getLogger(this::class.java)
+
     private var mapper : AmexDatabaseMapper = createSQLSession.getMapper(AmexDatabaseMapper::class.java);
 
     override fun createAGiftCard(giftCardModelRequest: GiftCardModelRequest): GiftCardModelDBResponse {
@@ -20,6 +25,8 @@ class AMEXServiceImpl(
             giftCardModelRequest.value,
             giftCardModelRequest.points_cost,
             createAnId())
+
+        logger.info("Created: $giftCardModelDBResponse")
 
         mapper.createAnGiftCard(giftCardModelDBResponse = giftCardModelDBResponse);
         createSQLSession.commit(true)
@@ -57,6 +64,8 @@ class AMEXServiceImpl(
         if(anGiftCard == null){
             throw GiftCardIDNotFoundException("Giftcard ID:$id not found")
         } else {
+            logger.info("$id deleted.")
+
             mapper.deleteAnGiftCard(uuid = id)
             createSQLSession.commit(true)
         }
