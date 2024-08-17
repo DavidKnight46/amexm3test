@@ -1,6 +1,7 @@
 #! /bin/bash
 
-git checkout -b dev
+git checkout dev
+git pull
 
 cd ./src/main/resources
 
