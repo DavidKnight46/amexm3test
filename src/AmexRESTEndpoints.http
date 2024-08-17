@@ -9,16 +9,16 @@ Content-Type: application/json
 }
 
 ### GET valid giftcard
-GET http://localhost:3000/amex/api/v1/giftcardcontroller/getAnGiftCard/77e429f2-c5c1-402a-afdf-b511e1797ffc
+GET http://localhost:3000/amex/api/v1/giftcardcontroller/gift_cards/ef92005b-f3d4-47d5-bf76-3fd4e5f445ff
 
 ### Get invalid giftcard
-GET http://localhost:3000/amex/api/v1/giftcardcontroller/getAnGiftCard/77e429f2-c5c1-402a-afdf-b511e1797ff
+GET http://localhost:3000/amex/api/v1/giftcardcontroller/gift_cards/77e429f2-c5c1-402a-afdf-b511e1797ff
 
 ### Delete an valid Giftcard
-DELETE http://localhost:3000/amex/api/v1/giftcardcontroller/deleteAnGiftCard/77e429f2-c5c1-402a-afdf-b511e1797ffc
+DELETE http://localhost:3000/amex/api/v1/giftcardcontroller/gift_cards/77e429f2-c5c1-402a-afdf-b511e1797ffc
 
 ### Delete an invalid Giftcard
-DELETE http://localhost:3000/amex/api/v1/giftcardcontroller/deleteAnGiftCard/77e429f2-c5c1-402a-afdf-b511e1797ff
+DELETE http://localhost:3000/amex/api/v1/giftcardcontroller/gift_cards/77e429f2-c5c1-402a-afdf-b511e1797ff
 
 ### GET all giftcards
-GET http://localhost:3000/amex/api/v1/giftcardcontroller/getAllGiftCards
+GET http://localhost:3000/amex/api/v1/giftcardcontroller/gift_cards
