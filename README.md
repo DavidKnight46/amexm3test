@@ -11,16 +11,18 @@ The following software will be required to run this application:
 * Gradle 8.8
 * Java 17
 * GIT
-* Postgres DB
+* Postgres DB (with default postgres user)
+* pgAdmin 4 (optional)
 * Intellij IDE
 
 ### Build & Run REST Application
 
 To run this software please perform the following steps:
 
-* Git clone the repo with following command: git clone
-* Navigate to root directory (where buildScript.sh is located)
+* Git clone the repo with following command: git clone git@github.com:DavidKnight46/amexm3test.git
+* Navigate to root directory of repo (where buildScript.sh is located)
 * Run ./buildScript.sh
+* Enter password setup for postgres user when prompted
 * Optional test endpoints using AmexRESTEndpoints.http in Intellij
 
 ### Limitations
