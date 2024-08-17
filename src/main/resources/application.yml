@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: AmexExcerise
+
+server:
+  servlet:
+    context-path: /amex/api/v1/
+  port: 3000
+
+mybatis:
+  url: ./src/main/resources/MyBatisConfiguration.xml
+
+---
