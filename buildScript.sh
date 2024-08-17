@@ -1,5 +1,8 @@
 #! /bin/bash
 
+git checkout dev
+git pull
+
 cd ./src/main/resources
 
 pwd

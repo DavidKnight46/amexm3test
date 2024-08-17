@@ -13,25 +13,25 @@ class AMEXController(amexServiceImpl: AMEXServiceImpl) {
 
     val amexServiceI : AMEXServiceImpl = amexServiceImpl;
 
-    @PostMapping("createAnGiftCard")
+    @PostMapping("gift_cards")
     @ResponseStatus(HttpStatus.CREATED)
     fun createAnGiftCard(@RequestBody request: GiftCardModelRequest):GiftCardModelDBResponse{
         return amexServiceI.createAGiftCard(request)
     }
 
-    @GetMapping("getAnGiftCard/{id}")
+    @GetMapping("gift_cards/{id}")
     @ResponseStatus(HttpStatus.OK)
     fun getAnGiftCard(@PathVariable id: String): GiftCardModelResponse{
         return amexServiceI.getGiftCard(id = id)
     }
 
-    @DeleteMapping("deleteAnGiftCard/{id}")
+    @DeleteMapping("gift_cards/{id}")
     @ResponseStatus(HttpStatus.OK)
     fun deleteAnGiftCard(@PathVariable id: String){
         amexServiceI.deleteAnGiftCard(id = id)
     }
 
-    @GetMapping("getAllGiftCards")
+    @GetMapping("gift_cards")
     @ResponseStatus(HttpStatus.OK)
     fun getAllGiftCards(): List<GiftCardModelResponse>{
         return amexServiceI.getAllGiftCards()
