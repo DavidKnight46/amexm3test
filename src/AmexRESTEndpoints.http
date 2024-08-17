@@ -1,0 +1,24 @@
+### GET request to example server
+POST http://localhost:3000/amex/api/v1/giftcardcontroller/createAnGiftCard
+Content-Type: application/json
+
+{
+ "company_name":"Square",
+ "value": 50,
+ "points_cost": 1000
+}
+
+### GET valid giftcard
+GET http://localhost:3000/amex/api/v1/giftcardcontroller/getAnGiftCard/77e429f2-c5c1-402a-afdf-b511e1797ffc
+
+### Get invalid giftcard
+GET http://localhost:3000/amex/api/v1/giftcardcontroller/getAnGiftCard/77e429f2-c5c1-402a-afdf-b511e1797ff
+
+### Delete an valid Giftcard
+DELETE http://localhost:3000/amex/api/v1/giftcardcontroller/deleteAnGiftCard/77e429f2-c5c1-402a-afdf-b511e1797ffc
+
+### Delete an invalid Giftcard
+DELETE http://localhost:3000/amex/api/v1/giftcardcontroller/deleteAnGiftCard/77e429f2-c5c1-402a-afdf-b511e1797ff
+
+### GET all giftcards
+GET http://localhost:3000/amex/api/v1/giftcardcontroller/getAllGiftCards
