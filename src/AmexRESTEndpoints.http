@@ -1,9 +1,9 @@
 ### GET request to example server
-POST http://localhost:3000/amex/api/v1/giftcardcontroller/gift_cardsclear
+POST http://localhost:3000/amex/api/v1/giftcardcontroller/gift_cards
 Content-Type: application/json
 
 {
- "company_name":"Square",
+ "company_name":"SeeD",
  "value": 50,
  "points_cost": 1000
 }
