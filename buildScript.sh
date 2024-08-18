@@ -3,8 +3,12 @@
 git checkout docker
 git pull
 
-docker image build -t app .
+cd ../../../
 
-cd ./src/main/resources
+cp ./build/libs/*.jar ./src/main/docker
+
+cd ./src/main/docker
+
+docker image build -t app .
 
 docker-compose up
