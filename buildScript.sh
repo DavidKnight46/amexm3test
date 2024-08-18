@@ -2,8 +2,7 @@
 
 git checkout docker
 git pull
-
-cd ../../../
+pwd
 
 cp ./build/libs/*.jar ./src/main/docker
 
